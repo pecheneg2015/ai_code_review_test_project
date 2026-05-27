@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export const TestComponent = ()=>{
-  const test = "test console content"
-           const btnClck  = ()=>{console.log(test)}
-  return <button onClick={btnClck}>test</button>
-}
+const btnClck = () => {
+  console.log('clicked');
+};
+
+export const Button = (props) => {
+  const [data, setData] = useState(null);
+
+  return (
+    <button onClick={btnClck}>
+      <img src="icon.png" />
+    </button>
+  );
+};
